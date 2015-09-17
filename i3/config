@@ -3,7 +3,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVu Sans 10
+font pango:Droid Sans 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -186,6 +186,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+  mode hide
+  tray_output eDP1
   status_command i3blocks
   colors {
     background #111213
@@ -194,6 +196,7 @@ bar {
     focused_workspace #323232 #eeeeee #111213
     urgent_workspace #eeeeee #c22832 #ffffff
   }
+  font pango:Droid Sans 9
 }
 
 #new_window normal 0
@@ -205,17 +208,18 @@ for_window [class="Vocal"] floating enable
 for_window [class="Pidgin" window_role="conversation"] floating enable
 for_window [class="Pidgin" window_role="buddy_list"] floating enable
 for_window [class="Skype"] floating enable
-for_window [class="Google-chrome-beta" window_role="pop-up"] floating enable
-for_window [class="Google-chrome-beta" window_role="app"] floating enable
+for_window [class="google-chrome-beta" window_role="pop-up"] floating enable
+for_window [class="google-chrome-beta" window_role="app"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="Virt-manager" instance="virt-manager" title=".* Virtual Machine"] floating enable
 for_window [class="Ekiga"] floating enable
 for_window [class="qemu-system-arm"] floating enable
 
 # Startup programs
+exec --no-startup-id synapse
 exec --no-startup-id xgamma -rgamma 1.41 -ggamma 1.37 -bgamma 1.40
 #exec --no-startup-id compton -b --config /home/kenny/.config/compton.conf
-exec --no-startup-id feh --image-bg black --bg-fill /home/kenny/Dropbox/Images/Wallpapers/elegant-arch.png
+exec --no-startup-id feh --image-bg black --bg-fill /home/kenny/Dropbox/Images/Wallpapers/arch_linux_bw_wallpaper_by_thales_img-d2yl9ul.png
 exec --no-startup-id /usr/local/bin/gnome-keyring-daemon-autostart
 exec --no-startup-id dropbox
 exec --no-startup-id megasync
@@ -227,3 +231,4 @@ client.focused          #262729 #262729 #FAFAFA #262729
 client.focused_inactive #1D1D1D #1D1D1D #6D9EAC #1D1D1D
 client.unfocused        #1D1D1D #1D1D1D #6D9EAC #1D1D1D
 client.urgent           #E04613 #E04613 #FAFAFA #E04613
+

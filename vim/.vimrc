@@ -79,7 +79,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Enable airline
 set laststatus=2
 
-"let g:airline_theme= "murmur"
+let g:airline_theme= "ubaryd"
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
@@ -104,4 +104,3 @@ let g:promptline_preset = {
   \'y' : [ promptline#slices#git_status() ],
   \'z' : [ promptline#slices#vcs_branch({ 'git': 1, 'svn': 1}) ],
   \'warn' : [ promptline#slices#last_exit_code() ]}
-

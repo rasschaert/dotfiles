@@ -1,11 +1,11 @@
 {
 	"auto_complete_delay": 0,
-	"color_scheme": "Packages/User/SublimeLinter/Seti_monokai (SL).tmTheme",
+	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"findreplace_small": true,
 	"font_face": "Droid Sans Mono",
-	"font_size": 10,
+	"font_size": 9,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -13,6 +13,6 @@
 	"sidebar_medium": true,
 	"tab_size": 4,
 	"tabs_medium": true,
-	"theme": "Default.sublime-theme",
+	"theme": "Brogrammer.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
